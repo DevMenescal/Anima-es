@@ -1,0 +1,138 @@
+/* Reset Global*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos do Body*/
+body{
+    text-align: center;
+    font-family: Calibri;
+    background: linear-gradient(to right, bisque, yellowgreen);
+}
+
+/* Estilos da Section (seções)*/
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: burlywood;
+    border: 3px solid chocolate;
+    border-radius: 30px;
+    padding: 30px;
+    margin: 50px;
+}
+
+/* Estilos do Item-Blue*/
+.item-blue{
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 20px 40px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos do Item-Purple*/
+.item-purple{
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    border-radius: 20px 40px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos do Item-Green*/
+.item-green{
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 20px 40px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Transitions com Hover*/
+.transition{
+    transition: background-color 0.5s;
+}
+
+.transition:hover{
+    background-color: red;
+}
+
+.transition-size{
+    transition: transform 0.5s;
+}
+
+.transition-size:hover{
+    transform: scale(1.5);
+}
+
+.transition-rotate{
+    transition: transform 0.5s;
+}
+
+.transition-rotate:hover{
+    transform: rotateZ(360deg); /* PODE ROTACIONAR NOS EIXOS X, Y, Z, ACOMPANHADO DOS GRAUS. GRAUS ENTRE PARÊNTESES (90deg) */
+}
+
+.transition-delay{
+    transition: width 1s 0.5s, height 1s; /* SINTAXE: PROPRIEDADE, TEMPO, DELAY*/
+}
+
+.transition-delay:hover{
+    width: 200px;
+    height: 200px;
+}
+
+.transition-checkbox{
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+    transition: transform 0.5s;
+}
+
+.transition-checkbox:checked{
+    transform: rotateY(360deg);
+}
+
+.transition-radio{
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+    transition: transform 0.5s;
+}
+
+.transition-radio:checked{
+    transform: scale(2);
+}
+
+.transition-text{
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    transition: transform 1s;
+}
+
+.transition-text:focus{
+    transform: scaleY(0.5) scaleX(0.7) rotateZ(180deg);
+}
