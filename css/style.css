@@ -136,3 +136,171 @@ section{
 .transition-text:focus{
     transform: scaleY(0.5) scaleX(0.7) rotateZ(180deg);
 }
+
+.animation-fade{
+    animation: fadeIn 4s linear; /* nome da keyframe, tempo, tipo*/
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.animation-fade-out{
+    animation: fadeIn 4s linear;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+
+.animation-fade-in-out{
+    animation: fadeInOut 4s linear infinite;
+}
+
+@keyframes fadeInOut{
+    0%{
+        opacity: 0;
+    }
+
+    25%{
+        opacity: 0.2;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    75%{
+        opacity: 0.7;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.animation-spinner{
+    animation: rotate 4s linear infinite;
+}
+
+.animation-ease{
+    animation: rotate 4s ease infinite;
+}
+
+.animation-ease-out{
+    animation: rotate 4s ease-out infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotateZ(0deg);
+    }
+
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+.position-box{
+    background-color: aquamarine;
+    border-radius: 30px;
+    width: 90%;
+    height: 300px;
+    position: relative;
+}
+
+.animation-position{
+    position: absolute;
+    animation: position 4s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes position{
+    0%{
+        top:0;
+        left:0;
+    }
+
+    25%{
+        top: 0;
+        left:calc(100% - 100px); 
+    }
+
+    50%{
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+    }
+
+    75%{
+        top: calc(100% - 100px);
+        left: 0;
+    }
+
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+
+.item-blue:hover,
+.item-purple:hover,
+.item-green:hover{
+    animation-play-state: paused;
+}
+
+.animation-content::after{
+    content: '';
+    animation: promocao 4s infinite;
+}
+
+@keyframes promocao{
+    0%{ 
+        content: 'Promoção';
+    }
+
+    50%{
+        content: '';
+    }
+
+    100%{
+        content: 'FRETE GRÁTIS';
+    }
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.clock,
+.hours,
+.minutes{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hours{
+    animation: girarPonteiro 720s linear infinite;
+}
+
+.minutes{
+    animation: girarPonteiro 60s linear infinite;
+}
+
+@keyframes girarPonteiro{
+    from{
+        transform: rotateZ(0deg);
+    }
+
+    to{
+        transform: rotateZ(360deg);
+    }
+}
