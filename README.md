@@ -1,2 +1,2 @@
 # Animações
- Tipos de Animções em CSS
+ Tipos de Animações em CSS
